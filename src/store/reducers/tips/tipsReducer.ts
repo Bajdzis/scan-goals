@@ -1,4 +1,4 @@
-import { reducerWithInitialState } from "typescript-fsa-reducers";
+import { reducerWithInitialState } from 'typescript-fsa-reducers';
 
 export interface TipsState {
 

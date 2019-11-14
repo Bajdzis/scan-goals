@@ -9,6 +9,9 @@
     "@types/react": "^16.9.11",
     "@types/react-dom": "^16.9.4",
     "@types/react-redux": "^7.1.5",
+    "@typescript-eslint/eslint-plugin": "^2.7.0",
+    "@typescript-eslint/parser": "^2.7.0",
+    "eslint": "^6.6.0",
     "gh-pages": "^2.1.1",
     "node-sass": "^4.13.0",
     "npm": "^6.13.0",
@@ -22,6 +25,7 @@
     "typescript-fsa-reducers": "^1.2.1"
   },
   "scripts": {
+    "lint": "eslint ./ --ext .ts",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
