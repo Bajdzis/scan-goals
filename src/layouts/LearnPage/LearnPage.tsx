@@ -1,19 +1,20 @@
 import React from 'react';
-import './HomePage.scss';
+import './LearnPage.scss';
 import { useDispatch } from 'react-redux';
 import { createNewGoals } from '../../store/actions/goals/action';
 
-export const HomePage: React.FC = () => {
+export const LearnPage: React.FC = () => {
     const dispatch = useDispatch();
     return (
         <div>
-            <div>Cytat motywacyjny</div>
+            <h1>Rozwijaj się</h1>
+            <p>Wybierz cidziennie jeden obszar w którym chcesz się rozwijać</p>
             <button type="button" onClick={() => {
-                dispatch(createNewGoals('test'));
+                dispatch(createNewGoals("test"));
             }}>Zaplanuj cele</button>
             <button type="button">Rozwijaj się</button>
             <button type="button">Zmotywuj znajomych</button>
         </div>
 
     );
-};
+}
