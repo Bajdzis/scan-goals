@@ -2,13 +2,15 @@
 import { combineReducers, createStore, Action } from 'redux';
 import { goalsReducer, GoalsState } from './reducers/goals/goalsReducer';
 import { tipsReducer, TipsState } from './reducers/tips/tipsReducer';
+import { LearnState, learnReducer } from './reducers/learn/learnReducer';
 
-interface RootState {
+export interface RootState {
     goals: GoalsState,
-    tips: TipsState
+    tips: TipsState,
+    learn: LearnState
 }
 
-const rootReducer = combineReducers({goals: goalsReducer, tips: tipsReducer});
+const rootReducer = combineReducers({goals: goalsReducer, tips: tipsReducer, learn: learnReducer});
 
 const initialState: RootState = JSON.parse(window.localStorage.getItem('state') || '{}') as RootState;
 

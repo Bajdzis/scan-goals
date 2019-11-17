@@ -1,19 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './LearnPage.scss';
-import { useDispatch } from 'react-redux';
-import { createNewGoals } from '../../store/actions/goals/action';
+import { LearnGroupNames } from '../../store/reducers/learn/learnReducer';
+import { NewTip } from './components/NewTip/NewTip';
 
 export const LearnPage: React.FC = () => {
-    const dispatch = useDispatch();
+    const [page, setPage] = useState<LearnGroupNames|null>(null);
     return (
         <div>
-            <h1>Rozwijaj się</h1>
-            <p>Wybierz cidziennie jeden obszar w którym chcesz się rozwijać</p>
-            <button type="button" onClick={() => {
-                dispatch(createNewGoals("test"));
-            }}>Zaplanuj cele</button>
-            <button type="button">Rozwijaj się</button>
-            <button type="button">Zmotywuj znajomych</button>
+            {page === null && <>
+                <h1>Rozwijaj się</h1>
+
+                <button type="button" onClick={() => setPage('mind')}>Wiedza</button>
+                <button type="button" onClick={() => setPage('time')}>Czas</button>
+                <button type="button" onClick={() => setPage('fit')}>Zdrowie</button>
+            </>}
+
+            {page !== null && <NewTip groupName={page} onRead={() => setPage(null)}/>}
+            
         </div>
 
     );

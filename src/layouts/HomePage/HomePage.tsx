@@ -9,7 +9,10 @@ export const HomePage: React.FC = () => {
         <div>
             <div>Cytat motywacyjny</div>
             <button type="button" onClick={() => {
-                dispatch(createNewGoals('test'));
+                let title = prompt('Zapisz nazwę swojego celu');
+                if (title) {
+                    dispatch(createNewGoals(title));
+                }
             }}>Zaplanuj cele</button>
             <button type="button">Rozwijaj się</button>
             <button type="button">Zmotywuj znajomych</button>
