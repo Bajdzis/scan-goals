@@ -4,6 +4,7 @@ import { usePageRoute } from '../../hooks/usePageRoute';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/root';
 import { useLearnStats } from '../../hooks/useLearnStats';
+import { Quote } from '../../components/Quote/Quote';
 
 export const HomePage: React.FC = () => {
     const goToLearn = usePageRoute('learn');
@@ -13,7 +14,7 @@ export const HomePage: React.FC = () => {
     return (
         <div>
             <h1>Scan goals</h1>
-            <div>Miejsce na cytat motywacyjny</div>
+            <Quote />
 
             <button type="button" onClick={goToGoal}>Zaplanuj cele</button>
             <p>Obecna liczba celów {countGoal}</p>
