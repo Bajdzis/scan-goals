@@ -1,5 +1,4 @@
 import actionCreatorFactory from 'typescript-fsa';
-import { string } from 'prop-types';
 import { LearnGroupNames } from '../../reducers/learn/learnReducer';
  
 const actionCreator = actionCreatorFactory('LEARN');

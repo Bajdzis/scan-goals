@@ -1,20 +1,28 @@
 import React from 'react';
 import './HomePage.scss';
-import { useDispatch } from 'react-redux';
-import { createNewGoals } from '../../store/actions/goals/action';
+import { usePageRoute } from '../../hooks/usePageRoute';
+import { useSelector } from 'react-redux';
+import { RootState } from '../../store/root';
+import { useLearnStats } from '../../hooks/useLearnStats';
 
 export const HomePage: React.FC = () => {
-    const dispatch = useDispatch();
+    const goToLearn = usePageRoute('learn');
+    const goToGoal = usePageRoute('goal');
+    const countGoal = useSelector((state: RootState) => state.goals.length);
+    const {allTipsCount, readTipsCount} = useLearnStats();
     return (
         <div>
-            <div>Cytat motywacyjny</div>
-            <button type="button" onClick={() => {
-                let title = prompt('Zapisz nazwę swojego celu');
-                if (title) {
-                    dispatch(createNewGoals(title));
-                }
-            }}>Zaplanuj cele</button>
-            <button type="button">Rozwijaj się</button>
+            <h1>Scan goals</h1>
+            <div>Miejsce na cytat motywacyjny</div>
+
+            <button type="button" onClick={goToGoal}>Zaplanuj cele</button>
+            <p>Obecna liczba celów {countGoal}</p>
+            <br/>
+
+            <button type="button" onClick={goToLearn} disabled={readTipsCount === allTipsCount}>Rozwijaj się</button>
+            <p>Poznano {readTipsCount}/{allTipsCount}</p>
+            <br/>
+
             <button type="button">Zmotywuj znajomych</button>
         </div>
 

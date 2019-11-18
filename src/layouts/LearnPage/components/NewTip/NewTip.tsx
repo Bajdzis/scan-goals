@@ -10,12 +10,12 @@ interface NewTipProps {
     onRead(): void;
 }
 
-const countReadTips = (groupName: LearnGroupNames) => (state: RootState) => {
+export const countReadTips = (groupName: LearnGroupNames) => (state: RootState) => {
     const group = state.learn[groupName];
     return group.badTips.length + group.goodTips.length;
-}
+};
 
-export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }) => {
+export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }: NewTipProps) => {
     const dispatch = useDispatch();
     const count = useSelector(countReadTips(groupName));
     const tip = LEARN_TIP[groupName][count] || null;
@@ -28,8 +28,8 @@ export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }) => {
             feedback,
             groupName,
             id: tip.id
-        }))
-    }
+        }));
+    };
     return (
         <div>
             <h1>{tip.title}</h1>

@@ -28,7 +28,7 @@ export const learnReducer = reducerWithInitialState<LearnState>(INITIAL_STATE)
                 goodTips: [...state[payload.groupName].goodTips, ...(payload.feedback === 'good' ? [payload.id] : [])],
                 badTips: [...state[payload.groupName].badTips, ...(payload.feedback === 'bad' ? [payload.id] : [])]
             }
-        }
+        };
     });
 
 
