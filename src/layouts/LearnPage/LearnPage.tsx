@@ -30,7 +30,10 @@ export const LearnPage: React.FC = () => {
             
             </>}
 
-            {page !== null && <NewTip groupName={page} onRead={() => setPage(null)}/>}
+            {page !== null && <NewTip groupName={page} onRead={() => {
+                setPage(null);
+                goToHome();
+            }} />}
             
         </div>
 
