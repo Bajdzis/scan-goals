@@ -38,31 +38,45 @@ export interface LearnTip {
     description: string;
 }
 
-export const LEARN_TIP: {[key in LearnGroupNames]: LearnTip[]} = {
+const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
+    'mind-1' : {
+        title: 'Zerwij z rozmyślaniem',
+        description: 'Jest tylko tu i teraz. Skończ z myśleniem o przeszłości i przyszłosci.'
+    },
+    'time-1': {
+        title: 'Skup się!',
+        description: 'Zmiejsz ilość powiadomień'
+    },
+    'fit-1': {
+        title: 'Rusz się!',
+        description: 'Koniec z windą'
+    },
+    'fit-2': {
+        title: 'Rób pomiary!',
+        description: 'Sprawdzaj czy Twoje działania przynoszą pożadany skutek'
+    }
+};
+
+export function getTip(id: string): LearnTip {
+    if(LEARN_TIP[id]){
+        return { ...LEARN_TIP[id] , id};
+    }
+    return {
+        id: 'unknown',
+        description: '',
+        title: ''
+    };
+}
+
+export const LEARN_TIP_GROUP: {[key in LearnGroupNames]: LearnTip[]} = {
     mind: [
-        {
-            id: 'mind-1',
-            title: 'Zerwij z rozmyślaniem',
-            description: 'Jest tylko tu i teraz. Skończ z myśleniem o przeszłości i przyszłosci.'
-        }
+        getTip('mind-1')
     ],
     time:[
-        {
-            id: 'time-1',
-            title: 'Skup się!',
-            description: 'Zmiejsz ilość powiadomień'
-        }
+        getTip('time-1')
     ],
     fit: [
-        {
-            id: 'fit-1',
-            title: 'Rusz się!',
-            description: 'Koniec z windą'
-        },
-        {
-            id: 'fit-2',
-            title: 'Rób pomiary!',
-            description: 'Sprawdzaj czy Twoje działania przynoszą pożadany skutek'
-        }
+        getTip('fit-1'),
+        getTip('fit-1')
     ]
 };

@@ -12,3 +12,10 @@ interface EditGoalsParams{
 
 export const editGoals = actionCreator<EditGoalsParams>('EDIT');
 
+interface AssignTipToGoalsParams {
+    index: number;
+    tipId: string;
+}
+
+export const assignTipToGoals = actionCreator<AssignTipToGoalsParams>('ASSIGN_TIP_TO_GOALS');
+

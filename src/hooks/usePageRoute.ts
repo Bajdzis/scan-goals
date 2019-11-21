@@ -1,11 +1,14 @@
 import { useDispatch } from 'react-redux';
-import { PageState } from '../store/reducers/page/pageReducer';
+import { PageName } from '../store/reducers/page/pageReducer';
 import { goToPage } from '../store/actions/page/action';
 
-export function usePageRoute(page: PageState){
+export function usePageRoute(page: PageName){
     const dispatch = useDispatch();
 
     return () => {
-        dispatch(goToPage(page));
+        dispatch(goToPage({
+            name: page,
+            props: {}
+        }));
     };
 }

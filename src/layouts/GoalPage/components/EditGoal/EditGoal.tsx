@@ -3,7 +3,8 @@ import './EditGoal.scss';
 import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../../../store/root';
 import { editGoals } from '../../../../store/actions/goals/action';
-import { Goal, GOAL_FIELDS, GoalField } from '../../../../store/reducers/goals/goalsReducer';
+import { Goal, GOAL_FIELDS } from '../../../../store/reducers/goals/goalsReducer';
+import { getTip } from '../../../../store/reducers/learn/learnReducer';
 
 interface EditGoalProps {
     goalIndex: number;
@@ -19,7 +20,7 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
         const elements = Array.from(form.elements) as HTMLInputElement[];
         const fields = elements.reduce((fields, {value, name}) => {
             if (value && GOAL_FIELDS.includes(name as any)) {
-                fields[name as GoalField] = value;
+                fields[name as 'name'] = value;
             }
             return fields;
         }, {} as Partial<Goal>);
@@ -37,6 +38,12 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
                 <input type="text" name="name" defaultValue={goal.name}/>
                 <button type="submit">Zapisz</button>
             </form>
+            <h2>Przydatne wskazówki:</h2>
+            {goal.tipsId.map(tipId => {
+                const tip = getTip(tipId);
+
+                return <div key={tipId}>{tip.title}</div>;
+            })}
         </div>
     );
 };
