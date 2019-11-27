@@ -14,8 +14,9 @@ export const LearnPage: React.FC = () => {
     return (
         <div>
             {page === null && <>
-                <button onClick={goToHome}>{'<'} Wróć</button>
+                <button className="backButton" onClick={goToHome} title="Wróć">{'<'} </button>
                 <h1>Rozwijaj się</h1>
+                <p>Wybierz jeden z trzech obszarów w których chciałbyś się rozwijać. Dziennie może odczytać tylko jedną wzkazówkę. </p>
 
                 <button type="button" onClick={() => setPage('mind')} disabled={mindCount === LEARN_TIP_GROUP.mind.length}>Wiedza</button>
                 <p>Lekcji {mindCount}/{LEARN_TIP_GROUP.mind.length}</p>

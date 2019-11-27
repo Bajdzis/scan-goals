@@ -17,7 +17,7 @@ export const PAGE_NAME_TO_COMPONENT = {
     assignTip: AssignTipPage
 };
 
-const App: React.FC = () => {
+export const App: React.FC = () => {
     // if(Notification.permission !== 'granted'){
     //     return <PermissionPage />;
     // }
@@ -29,4 +29,3 @@ const App: React.FC = () => {
     );
 };
 
-export default App;
