@@ -5,6 +5,7 @@ import { LearnGroupNames, LEARN_TIP_GROUP } from '../../../../store/reducers/lea
 import { RootState } from '../../../../store/root';
 import { readTip } from '../../../../store/actions/learn/action';
 import { goToPage } from '../../../../store/actions/page/action';
+import { addToastr } from '../../../../store/actions/toastr/action';
 
 interface NewTipProps {
     groupName: LearnGroupNames;
@@ -29,6 +30,10 @@ export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }: NewTipProps
             feedback,
             groupName,
             id: tip.id
+        }));
+        tip.unlockFields.length && dispatch(addToastr({
+            type: "success",
+            message: "Gratulacje! Odblokowałeś nowe pole do uzupelnienia w zakładce cele. Uzupełnij je najszybciej jak to mozliwe!"
         }));
         feedback === 'good' && dispatch(goToPage({
             name:'assignTip',

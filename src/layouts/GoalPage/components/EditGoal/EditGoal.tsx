@@ -20,7 +20,7 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
         const elements = Array.from(form.elements) as HTMLInputElement[];
         const fields = elements.reduce((fields, {value, name}) => {
             if (value && GOAL_FIELDS.includes(name as any)) {
-                fields[name as 'name'] = value;
+                fields[name as 'name' | 'why'] = value;
             }
             return fields;
         }, {} as Partial<Goal>);
@@ -36,9 +36,10 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
             <button onClick={onStopEdit}>{'<'} Wróć</button>
             <form action="" onSubmit={onSubmit}>
                 <input type="text" name="name" defaultValue={goal.name}/>
+                <input type="text" name="why" defaultValue={goal.why}/>
                 <button type="submit">Zapisz</button>
             </form>
-            <h2>Przydatne wskazówki:</h2>
+            {goal.tipsId.length && <h2>Przydatne wskazówki:</h2>}
             {goal.tipsId.map(tipId => {
                 const tip = getTip(tipId);
 

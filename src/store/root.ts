@@ -4,19 +4,25 @@ import { goalsReducer, GoalsState } from './reducers/goals/goalsReducer';
 import { tipsReducer, TipsState } from './reducers/tips/tipsReducer';
 import { LearnState, learnReducer } from './reducers/learn/learnReducer';
 import { PageState, pageReducer } from './reducers/page/pageReducer';
+import { goalFieldsReducer, GoalFieldsState } from './reducers/goalFields/goalFieldsReducer';
+import { ToastrState, toastrReducer } from './reducers/toastr/toastrReducer';
 
 export interface RootState {
     goals: GoalsState,
     tips: TipsState,
     learn: LearnState,
-    page: PageState
+    page: PageState,
+    goalFields: GoalFieldsState,
+    toastr: ToastrState
 }
 
 const rootReducer = combineReducers({
     goals: goalsReducer, 
     tips: tipsReducer, 
     learn: learnReducer,
-    page: pageReducer
+    page: pageReducer,
+    goalFields: goalFieldsReducer,
+    toastr: toastrReducer
 });
 
 const initialState: RootState = JSON.parse(window.localStorage.getItem('state') || '{}') as RootState;
