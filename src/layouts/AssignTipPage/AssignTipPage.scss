@@ -1,0 +1,35 @@
+.assignTipPage {
+
+    &__goal {
+        background: rgba(0,0,0,0.2);
+        border-radius: 4px;
+        margin: 10px 0;
+        padding: 10px;
+        display: flex;
+        cursor: pointer;
+    }
+
+    &__input {
+        display: none;
+    }
+    &__input + span {
+        display: block;
+        &::before {
+            content: "\00a0";
+            display: inline-block;
+            margin-right: 8px;
+            width: 18px;
+            height: 18px;
+            border: 2px solid #fff;
+            border-radius: 50%;
+            color: #000;
+            font-size: 14px;
+            text-align: center;
+        }
+    }
+    &__input:checked + span::before {
+        background:#fff;
+        content: "\2714";
+
+    }
+}

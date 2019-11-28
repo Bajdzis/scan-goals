@@ -1,0 +1,14 @@
+.quote {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 4px;
+    background: #b1d5e6;
+    color: #1b1b1b;
+    &__value {
+        margin-bottom: 16px;
+    }
+    &__author {
+        font-size: 0.85em;
+        opacity: 0.8;
+    }
+}

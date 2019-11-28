@@ -5,9 +5,12 @@ import { useQuote } from '../../hooks/useQuote';
 export const Quote: React.FC = () => {
     const quote = useQuote();
 
-    return (<div >
-        {quote.value}
-         - 
-        {quote.author}
+    return (<div className="quote">
+        <div className="quote__value">
+            {quote.value}
+        </div>
+        <div className="quote__author">
+            {quote.author}
+        </div>
     </div>);
 };

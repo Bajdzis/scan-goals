@@ -13,7 +13,7 @@ export const HomePage: React.FC = () => {
     const {allTipsCount, readTipsCount} = useLearnStats();
     return (
         <div>
-            <h1>Scan goals</h1>
+            <h1>Mój everest</h1>
             <Quote />
 
             <button type="button" onClick={goToGoal}>Zaplanuj cele</button>

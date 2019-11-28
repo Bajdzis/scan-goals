@@ -23,17 +23,18 @@ export const AssignTipPage: React.FC<AssignTipPageProps> = ({ tipId }: AssignTip
     };
 
     return (
-        <div>
-            Do których celów użyjesz zdobytą wiedzę?
+        <div className="assignTipPage">
+            <h2>Do których celów użyjesz zdobytą wiedzę?</h2>
             
             {goalArray.map((goal, index) => 
-                <label key={index} >
+                <label key={index} className="assignTipPage__goal">
                     <input 
+                        className="assignTipPage__input"
                         type="checkbox" 
                         onChange={() => toggleSelectByIndex(index)} 
                         checked={selectedIndex.includes(index)}
                     />
-                    {goal.name}
+                    <span>{goal.name}</span>
                 </label>
             )}
 
