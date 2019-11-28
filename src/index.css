@@ -34,6 +34,22 @@ code {
   position: relative;
 }
 
+input[type="text"] {
+  display: block;
+  width: 100%;
+  margin: 16px 0;
+  font: inherit;
+  padding: 8px;
+  border: 0;
+  background: rgba(0,0,0,0.2);
+  color: #fff;
+  border-bottom: 1px solid #ccc;
+  box-sizing: border-box;
+}
+input[type="text"]:focus {
+  outline: 0;
+  border-bottom: 1px solid #fff;
+}
 button {
   background: #fff;
   color: #383838;
@@ -47,10 +63,21 @@ button {
   padding: 10px;
   border: 0;
   border-radius: 4px;
+  opacity: 0.95;
+  cursor: pointer;
+}
+button:hover {
+  opacity: 1;
 }
 button:disabled{
   color: #ababab;
   opacity: 0.8;
+}
+
+button.two {
+  background: #2894d8;
+  border: 2px solid #fff;
+  color: #fff;
 }
 
 button.backButton{

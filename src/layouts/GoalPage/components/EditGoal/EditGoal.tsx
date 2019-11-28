@@ -14,6 +14,7 @@ interface EditGoalProps {
 export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: EditGoalProps) => {
     const dispatch = useDispatch();
     const goal = useSelector((state: RootState) => state.goals[goalIndex]);
+    const goalFields = useSelector((state: RootState) => state.goalFields);
     const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = e.target as HTMLFormElement;
@@ -35,11 +36,17 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
         <div>
             <button onClick={onStopEdit}>{'<'} Wróć</button>
             <form action="" onSubmit={onSubmit}>
-                <input type="text" name="name" defaultValue={goal.name}/>
-                <input type="text" name="why" defaultValue={goal.why}/>
+                <label>
+                    Nazwa
+                    <input type="text" name="name" defaultValue={goal.name}/>
+                </label>
+                {goalFields.includes('why') && <label>
+                    Co zmieni się w twoim zyciu gdy zrealizuejsz cel? Dlaczego chcesz go osiągnać?
+                    <input type="text" name="why" defaultValue={goal.why}/>
+                </label>}
                 <button type="submit">Zapisz</button>
             </form>
-            {goal.tipsId.length && <h2>Przydatne wskazówki:</h2>}
+            {!!goal.tipsId.length && <h2>Przydatne wskazówki:</h2>}
             {goal.tipsId.map(tipId => {
                 const tip = getTip(tipId);
 
