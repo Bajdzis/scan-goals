@@ -45,7 +45,7 @@ export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }: NewTipProps
     return (
         <div>
             <h1>{tip.title}</h1>
-            <p>{tip.description}</p>
+            {tip.description.map((text, index) => <p key={index}>{text}</p>)}
             <h2>Czy porada przyda Ci się do realizacji któregoś z celów?</h2>
             <button onClick={() => onClick('good')}>Tak</button>
             <button onClick={() => onClick('bad')}>Nie</button>
