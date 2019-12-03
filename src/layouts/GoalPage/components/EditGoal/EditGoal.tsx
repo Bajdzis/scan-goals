@@ -44,6 +44,38 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
                     Co zmieni się w twoim zyciu gdy zrealizuejsz cel? Dlaczego chcesz go osiągnać?
                     <input type="text" name="why" defaultValue={goal.why}/>
                 </label>}
+
+                {goalFields.includes('specific') && <label>
+                    Co chcesz osiągnąć? Po co chcesz zrealizować ten cel?
+                    <input type="text" name="specific" defaultValue={goal.specific}/>
+                </label>}
+
+                {goalFields.includes('measure') && <label>
+                    W jaki sposób chcesz mierzyć postęp? Skąd bedziesz wiedział czy idzesz do przodu?
+                    <input type="text" name="measure" defaultValue={goal.measure}/>
+                </label>}
+
+                {goalFields.includes('achievable') && <label>
+                    Na jakie mniejsze kroki można rozpisać twój cel?
+                    <input type="text" name="achievable" defaultValue={goal.achievable}/>
+                </label>}
+
+                {goalFields.includes('time') && <label>
+                    W jakim terminie powinieneś zrealizować pierwszy mniejszy krok z listy powyżej?
+                    <input type="text" name="time" defaultValue={goal.time}/>
+                </label>}
+
+                {goalFields.includes('exciting') && <label>
+                    Na jaki prezent sobie pozwolisz gdy spełnisz każdy mniejszy cel? 
+                    <input type="text" name="exciting" defaultValue={goal.exciting}/>
+                </label>}
+
+                {goalFields.includes('delete') && <label>
+                    Czy na pewno ten cel jest warty Twojej uwagi?
+                    <button>Usuń</button>
+                </label>}
+                
+
                 <button type="submit">Zapisz</button>
             </form>
             {!!goal.tipsId.length && <h2>Przydatne wskazówki:</h2>}

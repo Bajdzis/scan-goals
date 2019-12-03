@@ -4,12 +4,18 @@ import { createNewGoals, editGoals, assignTipToGoals } from '../../actions/goals
 export interface Goal {
     name: string;
     why?: string;
+    specific?: string;
+    measure?: string;
+    achievable?: string;
+    time?: string;
+    exciting?: string;
+    delete?: string;
     tipsId: string[];
 }
 
 export type GoalField = keyof Goal;
 
-export const GOAL_FIELDS: GoalField[] = ['name', 'why'];
+export const GOAL_FIELDS: GoalField[] = ['name', 'why', 'specific', 'measure', 'achievable', 'time', 'exciting', 'delete'];
 
 export type GoalsState = Goal[];
 
