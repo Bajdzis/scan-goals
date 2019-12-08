@@ -75,18 +75,19 @@ button:disabled{
 }
 
 button.two {
-  background: #2894d8;
+  background: transparent; /* #2894d8; */
   border: 2px solid #fff;
   color: #fff;
 }
 
-button.backButton{
-  position: absolute;
-  background: transparent;
-  color:#000;
-  top:0 ;
-  left:0;
+button.circle{
+  width: 42px;
+  padding: 0;
   display: inline-block;
+  height: 42px;
+  border-radius: 50%;
+}
+
+button.inline{
   width: auto;
-  font-size: 22px;
 }

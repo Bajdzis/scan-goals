@@ -16,14 +16,13 @@ export const WelcomePage: React.FC = () => {
         <div style={
             {
                 display: 'grid',
-                height: "100%",
+                height: '100%',
                 gridTemplateRows: 'auto 1fr'
             }
         }>
             <h1>Witaj w naszej aplikacji!</h1>
             <StickyScroll>
-                
-                    <p>Na początek wypisz swoje wszystkie cele, plany, marzenia które chciałbyś zrealizować. Będziemy intensywnie nad nimi pracować abyś mógł je spełnić. Pamiętaj marzenia się nie spełniają marzenia się spełnia!</p>
+                <p>Na początek wypisz swoje wszystkie cele, plany, marzenia które chciałbyś zrealizować. Będziemy intensywnie nad nimi pracować abyś mógł je spełnić. Zapisz także bardzo odległe cele, być może uda się je spełnić 😉</p>
                 <StickyItem top={0}>
                     <button type="button" onClick={createGoal}>Dodaj cel lub postanownie</button>
                 </StickyItem>
@@ -33,7 +32,7 @@ export const WelcomePage: React.FC = () => {
                 <div style={{height:"50vh"}}></div>
 
                 <StickyItem bottom={0}>
-                    <button type="button" onClick={goToHome} disabled={countGoal <= 0}> Zakończ dodawanie </button>
+                    <button type="button" className="two" onClick={goToHome} disabled={countGoal <= 0}> Zakończ dodawanie </button>
                 </StickyItem>
             </StickyScroll>
         </div>

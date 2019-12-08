@@ -6,6 +6,7 @@ import { RootState } from '../../../../store/root';
 import { readTip } from '../../../../store/actions/learn/action';
 import { goToPage } from '../../../../store/actions/page/action';
 import { addToastr } from '../../../../store/actions/toastr/action';
+import { StickyScroll } from '../../../../components/StickyScroll/StickyScroll';
 
 interface NewTipProps {
     groupName: LearnGroupNames;
@@ -43,12 +44,16 @@ export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }: NewTipProps
         }));
     };
     return (
-        <div>
+        <div className="newTip">
             <h1>{tip.title}</h1>
-            {tip.description.map((text, index) => <p key={index}>{text}</p>)}
-            <h2>Czy porada przyda Ci się do realizacji któregoś z celów?</h2>
-            <button onClick={() => onClick('good')}>Tak</button>
-            <button onClick={() => onClick('bad')}>Nie</button>
+            <StickyScroll>
+                {tip.description.map((text, index) => <p key={index}>{text}</p>)}
+                <h3>Czy porada przyda Ci się do realizacji któregoś z celów?</h3>
+                <div className="newTip__buttons">
+                    <button className="good" onClick={() => onClick('good')}>Tak</button>
+                    <button className="bad" onClick={() => onClick('bad')}>Nie</button>
+                </div>
+            </StickyScroll>
         </div>
     );
 };

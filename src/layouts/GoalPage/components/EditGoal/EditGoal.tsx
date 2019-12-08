@@ -5,6 +5,7 @@ import { RootState } from '../../../../store/root';
 import { editGoals } from '../../../../store/actions/goals/action';
 import { Goal, GOAL_FIELDS } from '../../../../store/reducers/goals/goalsReducer';
 import { getTip } from '../../../../store/reducers/learn/learnReducer';
+import { Header } from '../../../../components/Header/Header';
 
 interface EditGoalProps {
     goalIndex: number;
@@ -34,7 +35,9 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
 
     return (
         <div>
-            <button onClick={onStopEdit}>{'<'} Wróć</button>
+            <Header onClickBack={onStopEdit}>
+                Edycja celu
+            </Header>
             <form action="" onSubmit={onSubmit}>
                 <label>
                     Nazwa
@@ -72,7 +75,9 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
 
                 {goalFields.includes('delete') && <label>
                     Czy na pewno ten cel jest warty Twojej uwagi?
-                    <button>Usuń</button>
+                    <div style={{margin: '16px 0'}}>
+                        <button style={{background:'red',width: 'auto', color:'white'}}>Usuń</button>
+                    </div>
                 </label>}
                 
 

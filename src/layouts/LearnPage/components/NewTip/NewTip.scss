@@ -1,0 +1,10 @@
+.newTip {
+    display: grid;
+    height: 100%;
+    grid-template-rows: auto 1fr;
+    &__buttons {
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
