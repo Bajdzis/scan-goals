@@ -32,6 +32,8 @@ code {
 #root {
   height: 100%;
   position: relative;
+  max-width: 756px;
+  margin: 0 auto;
 }
 
 input[type="text"] {
@@ -80,7 +82,7 @@ button.two {
   color: #fff;
 }
 
-button.circle{
+button.circle {
   width: 42px;
   padding: 0;
   display: inline-block;
@@ -88,6 +90,6 @@ button.circle{
   border-radius: 50%;
 }
 
-button.inline{
+button.inline {
   width: auto;
 }

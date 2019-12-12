@@ -49,6 +49,34 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         ],
         unlockFields: []
     },
+    'mind-2' : {
+        title: 'Opisz dokłanie co chcesz osiagnać',
+        description: [
+            'Staraj nie skupiać się nad sposobem realizacji celu.'
+        ],
+        unlockFields: ['specific']
+    },
+    'mind-3' : {
+        title: 'Rozłóż plan w czasie',
+        description: [
+            'Podziel plan ma kilka mniejszych fragmentów.'
+        ],
+        unlockFields: ['achievable']
+    },
+    'mind-4' : {
+        title: 'Określ plan w czasie',
+        description: [
+            ''
+        ],
+        unlockFields: ['time']
+    },
+    'mind-5' : {
+        title: 'Odpoczynek i nagrody też są ważne!',
+        description: [
+            ''
+        ],
+        unlockFields: ['exciting']
+    },
     'time-1': {
         title: 'Skup się!',
         description: ['Zmiejsz ilość powiadomień'],
@@ -62,9 +90,9 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
     'time-3': {
         title: 'E-mail to poczta!',
         description: [
-            'Jeśli ktoś wysyła Ci e-mail oczekuje natychmiastowej odpowiedzi. W przeciwnym razie zawdzonił by do Ciebie lub napisał na czacie (facebook, slack, itd)',
+            'Jeśli ktoś wysyła Ci e-mail nie oczekuje natychmiastowej odpowiedzi. W przeciwnym razie zawdzonił by do Ciebie lub napisał na czacie (facebook, slack, itd)',
             'Często tracimy czas na bez sensowne odświezanie naszej poczty sprawdzając bardzo często czy nie dostaliśmy odpowiedzi w ważnej dla nas sprawie.',
-            'Zrób sobie wolne! W zalezności od ilosci poczty którą dostajesz dziennie sprawdzaj i odpisuj na wszystkie e-maila codzienie lub co dwa dni.'
+            'Zrób sobie wolne! W zależności od ilosci poczty którą dostajesz sprawdzaj i odpisuj na wszystkie e-maila codzienie lub co dwa dni.'
         ],
         unlockFields: []
     },
@@ -85,6 +113,16 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         title: 'Rób pomiary!',
         description: ['Sprawdzaj czy Twoje działania przynoszą pożadany skutek'],
         unlockFields: ['measure']
+    },
+    'fit-3': {
+        title: 'Eksperymentuj!',
+        description: ['Zmieniaj diete jeśli Ci nie odpowiada, poznaj nowe smaki?'],
+        unlockFields: []
+    },
+    'fit-4': {
+        title: 'Zadbaj o jakość snu!',
+        description: [''],
+        unlockFields: []
     }
 };
 
@@ -103,6 +141,10 @@ export function getTip(id: string): LearnTip {
 export const LEARN_TIP_GROUP: {[key in LearnGroupNames]: LearnTip[]} = {
     mind: [
         getTip('mind-1'),
+        getTip('mind-2'),
+        getTip('mind-3'),
+        getTip('mind-4'),
+        getTip('mind-5'),
     ],
     time:[
         getTip('time-1'),
@@ -112,6 +154,8 @@ export const LEARN_TIP_GROUP: {[key in LearnGroupNames]: LearnTip[]} = {
     ],
     fit: [
         getTip('fit-1'),
-        getTip('fit-1')
+        getTip('fit-2'),
+        getTip('fit-3'),
+        getTip('fit-4'),
     ]
 };
