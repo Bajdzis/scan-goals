@@ -6,6 +6,7 @@ import { LearnState, learnReducer } from './reducers/learn/learnReducer';
 import { PageState, pageReducer } from './reducers/page/pageReducer';
 import { goalFieldsReducer, GoalFieldsState } from './reducers/goalFields/goalFieldsReducer';
 import { ToastrState, toastrReducer } from './reducers/toastr/toastrReducer';
+import { TodayReadState, todayReadReducer } from './reducers/todayRead/todayReadReducer';
 
 export interface RootState {
     goals: GoalsState,
@@ -13,7 +14,8 @@ export interface RootState {
     learn: LearnState,
     page: PageState,
     goalFields: GoalFieldsState,
-    toastr: ToastrState
+    toastr: ToastrState,
+    todayRead: TodayReadState
 }
 
 const rootReducer = combineReducers({
@@ -22,7 +24,8 @@ const rootReducer = combineReducers({
     learn: learnReducer,
     page: pageReducer,
     goalFields: goalFieldsReducer,
-    toastr: toastrReducer
+    toastr: toastrReducer,
+    todayRead: todayReadReducer,
 });
 
 const initialState: RootState = JSON.parse(window.localStorage.getItem('state') || '{}') as RootState;
