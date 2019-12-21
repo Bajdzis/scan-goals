@@ -73,6 +73,12 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
                     <input type="text" name="exciting" defaultValue={goal.exciting}/>
                 </label>}
 
+                {goalFields.includes('events') && <label>
+                    Jakie sytuacje mogą Ci przeszkodzić w realizacji celu? 
+                    Jak zachowasz się gdy się pojawią?
+                    <input type="text" name="events" defaultValue={goal.events}/>
+                </label>}
+
                 {goalFields.includes('delete') && <label>
                     Czy na pewno ten cel jest warty Twojej uwagi?
                     <div style={{margin: '16px 0'}}>

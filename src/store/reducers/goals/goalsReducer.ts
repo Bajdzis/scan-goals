@@ -10,6 +10,7 @@ export interface Goal {
     time?: string;
     exciting?: string;
     delete?: string;
+    events?: string;
     tipsId: string[];
 }
 
