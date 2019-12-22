@@ -1,5 +1,13 @@
-.learnPage__buttons { 
-    display: grid;
-    gap: 16px;
-    grid-template-columns: 1fr 1fr;
+.learnPage {
+    &__buttons { 
+        display: grid;
+        gap: 16px;
+        grid-template-columns: 1fr 1fr;
+    }
+    &__alert {
+        margin: 1rem 0;
+        background: #d89228;
+        border-radius: 4px;
+        padding: 1rem;
+    }
 }

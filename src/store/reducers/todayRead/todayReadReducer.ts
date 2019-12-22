@@ -1,6 +1,5 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
 import { readTip } from '../../actions/learn/action';
-import { getTip } from '../learn/learnReducer';
 
 export interface TodayReadState {
     today: string;
@@ -18,5 +17,5 @@ export const getToday = () => {
 }
 
 export const todayReadReducer = reducerWithInitialState<TodayReadState>(INITIAL_STATE)
-    .case(readTip, (state) => ({today: getToday(), read: true}));
+    .case(readTip, () => ({today: getToday(), read: true}));
 

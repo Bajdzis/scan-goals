@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="/scan-goals/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#2894d8" />
+    <link href="/scan-goals/index.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhai&display=swap&subset=latin-ext" rel="stylesheet">
+    <meta
+      name="description"
+      content="Spełnij swoje cele noworoczne"
+    />
+    <link rel="apple-touch-icon" href="logo192.png" />
+    <link rel="manifest" href="/scan-goals/manifest.json" />
+    <title>Mój everest</title>
+
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root" style="text-align: center;">
+
+      <h1>Mój everest</h1>
+
+      <p style="padding:80px 0;">Już na początku roku startujemy z planami na nowy rok!</p>
+
+      <button>Ruszamy <span id="time"></span></button>
+      
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/pl.js"></script>
+    <script>
+        const endYear = moment("20200101", "YYYYMMDD");
+        const timeSpan = document.getElementById('time');
+        timeSpan.innerText  = endYear.fromNow();
+    </script>
+  </body>
+</html>

@@ -22,7 +22,11 @@ export const WelcomePage: React.FC = () => {
         }>
             <h1>Witaj w naszej aplikacji!</h1>
             <StickyScroll>
-                <p>Na początek wypisz swoje wszystkie cele, plany, marzenia które chciałbyś zrealizować. Będziemy intensywnie nad nimi pracować abyś mógł je spełnić. Zapisz także bardzo odległe cele, być może uda się je spełnić 😉</p>
+                <p>
+                    Na początek wypisz swoje wszystkie cele, plany, marzenia które chciałbyś zrealizować. Będziemy intensywnie nad nimi pracować abyś mógł je spełnić. Zapisz także bardzo odległe cele, być może uda się je spełnić 
+                    <span role="img">😉</span>
+                </p>
+
                 <StickyItem top={0}>
                     <button type="button" onClick={createGoal}>Dodaj cel lub postanownie</button>
                 </StickyItem>

@@ -5,12 +5,16 @@ import { useSelector } from 'react-redux';
 import { RootState } from '../../store/root';
 import { useLearnStats } from '../../hooks/useLearnStats';
 import { Quote } from '../../components/Quote/Quote';
+import { useShare } from '../../hooks/useShare';
+import { useSaveState } from '../../hooks/useSaveState';
 
 export const HomePage: React.FC = () => {
     const goToLearn = usePageRoute('learn');
     const goToGoal = usePageRoute('goal');
     const countGoal = useSelector((state: RootState) => state.goals.length);
     const {allTipsCount, readTipsCount} = useLearnStats();
+    const share = useShare();
+    const saveState = useSaveState();
     return (
         <div  style={
             {
@@ -56,11 +60,16 @@ export const HomePage: React.FC = () => {
                 </div>
             </div>
             <div>
-                <button type="button" >
+                <button type="button" onClick={saveState}>
+                    Wykonaj kopie
+                    <br/>
+                    <small >Zapisz swoje dane w pliku aby mieć pewność że ich nie stracisz</small>
+                </button>
+                {share && <button type="button" onClick={share}>
                     Zmotywuj znajomych
                     <br/>
-                    <small >Napisz do znajomych o swoich celach!</small>
-                </button>
+                    <small >Poleć naszą aplikacje jeśli Ci się podoba!</small>
+                </button>}
             </div>
         </div>
 
