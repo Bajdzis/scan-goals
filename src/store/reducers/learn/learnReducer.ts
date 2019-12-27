@@ -50,37 +50,42 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         unlockFields: []
     },
     'mind-2' : {
-        title: 'Opisz dokłanie co chcesz osiagnać',
+        title: 'Opisz dokładnie co chcesz osiągnąć',
         description: [
-            'Staraj nie skupiać się nad sposobem realizacji celu.'
+            'Nasze plany trudno nam zrealizować gdy nie wiemy co tak naprawde chcemy osiągnąć. Nasz cel powinien być najlepiej jak to możliwe sprecyzowany. Przykładami mało sprecyzowanych celów mogą być plany: “chcę schudnąć”, “chcę czytać więcej książek”. Obydwa przykłady nic nam nie mówią ponieważ są mało precyzyjne. Powinniśmy starać się wyznaczyć cel w taki sposób aby wiedzieć kiedy osiągniemy cel.',
+            'Prawidłowo sprecyzowane cele powinny brzmieć : “chcę schudnąć 5 kg”, “chcę przeczytać 3 książki każdego miesiąca”.', 
+            'Staraj nie skupiać się nad sposobem realizacji celu. Jedyne co powinieneś teraz określić to gdzie chcesz być a nie jak tam dojść.'
         ],
         unlockFields: ['specific']
     },
     'mind-3' : {
-        title: 'Rozłóż plan w czasie',
+        title: 'Rozłóż plan na części',
         description: [
-            'Podziel plan ma kilka mniejszych fragmentów.'
+            'Duży skomplikowany cel może nas przerosnąć. Gdy będziemy patrzeć jak dużo nam brakuje do jego realizacji możemy czuć że nie damy rady. Przez to odległe cel mogą być trudne w realizacji. A ich realizacja często odwlekana. Aby sobie pomóc warto wyznaczyć kilka mniejszych celów.',
+            'Załóżmy że chcemy schudnąć 10 kg. Warto aby pierwsza część celu była łatwa do osiągnięcia. Dlatego też możemy zacząć od 1 kg, następnie spróbować zawalczyć o 3 kg a na samym końcu zacząć realizować cel 10 kg. Dzięki temu nasz cel jest podzielony na 3 mniejsze fragmenty i możemy się skupić tylko na najbliższym aspekcie.'
         ],
         unlockFields: ['achievable']
     },
     'mind-4' : {
-        title: 'Określ plan w czasie',
-        description: [
-            ''
-        ],
-        unlockFields: ['time']
-    },
-    'mind-5' : {
         title: 'Odpoczynek i nagrody też są ważne!',
         description: [
-            ''
+            'Aby utrzymać motywację stosuj nagrody. Nagrody należą Ci się za realizację celów oraz za mniejsze części na które podzieliłeś cel w poprzedniej wskazówce. Pamiętaj aby nagroda nie była sprzeczna z jakimkolwiek innym celem. Wpisz do każdego celu jak możesz sobie uprzyjemnić dzień gdy osiągniesz określony stopień postępu prac. '
         ],
         unlockFields: ['exciting']
+    },
+    'mind-5' : {
+        title: 'Określ plan w czasie',
+        description: [
+            'Określ jak długo może Ci zająć zrealizowanie celu. Jeśli nie jesteś w stanie tego określić być może warto w pierwszej kolejności zrealizować tylko część celu. Możesz podzielić go na kilka mniejszych części a następnie zrezygnować z wykonywania niektórych z nich. Warto abyś był w stanie mniej więcej określić ile może zająć jego realizacja.'
+        ],
+        unlockFields: ['time']
     },
     'mind-6' : {
         title: 'Plan B',
         description: [
-            'Nie zawsze mamy siłę na realizację danego zadania. Wówczas warto wykonać inne zadanie jeśli to przybliży nas do wykonania celu.'
+            'Nie zawsze mamy siłę na realizację danego zadania. Wówczas warto wykonać inne zadanie jeśli to przybliży nas do wykonania celu. Jednym z takich zadań jest używanie naszej aplikacji lecz sposobów jest dużo więcej!',
+            'Gdy nie mamy siły na realizację zadań możemy obejrzeć inspirujący film o tematyce związanej z naszymi postanowieniami, przeczytać książkę lub przeglądać posty na facebook z wartościowych grup związanych z naszą branżą.',
+            'Wypisz wszystkie alternatywne czynności które możesz wykonywać aby przybliżyć się do realizacji celu!'
         ],
         unlockFields: ['events']
     },
@@ -95,9 +100,12 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         unlockFields: []
     },
     'time-2' : {
-        title: 'Dlaczego',
-        description: ['Odpowiedź sobie na jedno z najważniejszych pytań! Co dobrego stanie się w moim zyciu gdy zrealizuje okreslony cel. Warto się zastanowić dlaczego chcesz zrealizować określony cel? Aby Ci pomóc dodamy nowe pole w trybie edycji celu!'],
-        unlockFields: ['why']
+        title: 'Ogranicz dostęp do facebook oraz innych mediów',
+        description: [
+            'Mozliwość praktycznie nieskończonego przewijania głównej strony na facebook czy instagramie zabiera nam bardzo dużo czasu! Warto ustalić sobie limit czasowy na przeglądanie niekończących się treści.',
+            'Jeśli posiadasz telefon z systemem android w ustawieniach powinieneś znaleźć zakładkę “Cyfrowa równowaga” Możesz tam zweryfikować ile czasu poświęcasz na każda z zainstalowanych aplikacji. Możesz również ustawić tak zwany minutnik który będzie pilnował Cię aby zmniejszyć ilość poświecanego czasu na konkretne aplikacji'
+        ],
+        unlockFields: []
     },
     'time-3': {
         title: 'E-mail to poczta!',
@@ -116,6 +124,14 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         ],
         unlockFields: ['delete']
     },
+    'time-5' : {
+        title: 'Odpocznij od ciągłego myślenia',
+        description: [
+            'Często poświęcamy czas na powtarzanie sobie w myślach ważnych informacji lub zadań które mamy zrealizować. Zawsze mówimy sobie że przecież wszystko zapamiętamy. Jednak nie zawsze wychodzi to po naszej myśli.',
+            'Warto zastosować triki metody GTD (getting things done). Jeżeli masz jakiś pomysł/ myśl którą musisz zapamiętać wyciągnij telefon i ja zapisz. Dzięki temu będziesz mógł o niej zapomnieć. Jeśli będziesz zapisywał wszystkie zadania poczujesz się bardziej zrelaksowany oraz nie będziesz tracił czasu na zadawanie pytań takich jak : “Czy na pewno pamiętałem o wszystkim?”, “Coś ja miałem zrobić?”.'
+        ],
+        unlockFields: ['delete']
+    },
     'fit-1': {
         title: 'Rusz się!',
         description:[
@@ -128,9 +144,14 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         unlockFields: []
     },
     'fit-2': {
-        title: 'Sprawdzaj kalorycznosć!',
-        description: ['Sprawdzaj czy Twoje działania przynoszą pożadany skutek'],
-        unlockFields: ['measure']
+        title: 'Eksperymentuj!',
+        description: [
+            'Często słyszymy o efekcie jojo oraz o dietach cud. Jeśli ktoś osiągnął super sylwetkę często pytamy jaką dietę stosował. Jednak każdy z nas powinien taką dietę stworzyć pod siebie!',
+            'Nie jest to trudne! Zacznijmy od tego jak długo powinniśmy być na diecie? Biorąc pod uwage fakt że nie jesteśmy zadowoleni z swojej sylwetki powinniśmy porzucić nasz sposób odżywiania raz na zawsze! Jednak często wystarczą drobne zmiany aby nasza dieta nie dodawała nam kilogramów które zrzucimy.',
+            'Każda dieta odchudzająca działa na takiej samej zasadzie. Musimy jeść mniej kalorii niż potrzebujemy. Dlatego schudnąć możemy na każdej diecie nawet jedząc czekoladę w jej trakcie. Jednak warto ograniczyć słodycze oraz tłuste potrawy w trakcie diety odchudzającej. Dzięki temu będziemy jeść dużo większe posiłki zachowując tą samą liczbę kalorii. Dlatego też nie będziemy głodni.',
+            'Znajdź w sklepie play “Kalkulator kalorii scanfood” i zacznij zapisywać swoją obecną dietę w kalkulatorze. Nie musisz od razu przechodzić na dietę odchudzającą. Warto policzyć ile kalorii zapewnia nam nasza obecna dieta i na bieżąco wprowadzać zmiany.'
+        ],
+        unlockFields: []
     },
     'fit-3': {
         title: 'Rób pomiary!',
@@ -138,11 +159,6 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         unlockFields: ['measure']
     },
     'fit-4': {
-        title: 'Eksperymentuj!',
-        description: ['Zmieniaj diete jeśli Ci nie odpowiada, poznaj nowe smaki?'],
-        unlockFields: []
-    },
-    'fit-5': {
         title: 'Zadbaj o jakość snu!',
         description: [
             'Nie wysypiasz się? To nie dobrze! Gdy jesteśmy zaspani jesteśmy mniej efektywni i trudniej nam realizować spontaniczną aktywność w ciągu dnia! Do tego nie zapewniamy sobie odpowiedniej regeneracji naszego organizmu. Jakość snu może wpływać na nasze efekty utrzymania wagi. Zwracaj uwagę co poprawia Twoją jakość snu a co mu przeszkadza.',
@@ -178,13 +194,13 @@ export const LEARN_TIP_GROUP: {[key in LearnGroupNames]: LearnTip[]} = {
         getTip('time-1'),
         getTip('time-2'),
         getTip('time-3'),
-        getTip('time-4')
+        getTip('time-4'),
+        getTip('time-5')
     ],
     fit: [
         getTip('fit-1'),
         getTip('fit-2'),
         getTip('fit-3'),
         getTip('fit-4'),
-        getTip('fit-5'),
     ]
 };
