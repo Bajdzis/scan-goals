@@ -13,6 +13,13 @@ interface NewTipProps {
     onRead(): void;
 }
 
+const getMessageAboutField = (fields: string[]) => {
+    if (fields[0] === 'delete') {
+        return 'Gratulacje! Odblokowałeś możliwość usuwania celów. Zastanów się z których celów powinieneś zrezygnować aby zyskać więcej czasu!';
+    }
+    return 'Gratulacje! Odblokowałeś nowe pole do uzupelnienia w zakładce cele. Uzupełnij je najszybciej jak to mozliwe!'; 
+};
+
 export const countReadTips = (groupName: LearnGroupNames) => (state: RootState) => {
     const group = state.learn[groupName];
     return group.badTips.length + group.goodTips.length;
@@ -33,8 +40,8 @@ export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }: NewTipProps
             id: tip.id
         }));
         tip.unlockFields.length && dispatch(addToastr({
-            type: "success",
-            message: "Gratulacje! Odblokowałeś nowe pole do uzupelnienia w zakładce cele. Uzupełnij je najszybciej jak to mozliwe!"
+            type: 'success',
+            message: getMessageAboutField(tip.unlockFields)
         }));
         feedback === 'good' && dispatch(goToPage({
             name:'assignTip',
@@ -47,7 +54,9 @@ export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }: NewTipProps
         <div className="newTip">
             <h1>{tip.title}</h1>
             <StickyScroll>
-                {tip.description.map((text, index) => <p key={index}>{text}</p>)}
+                {tip.description.map((text, index) => <p key={index} dangerouslySetInnerHTML={{
+                    __html : text
+                }}/>)}
                 <h3>Czy porada przyda Ci się do realizacji któregoś z celów?</h3>
                 <div className="newTip__buttons">
                     <button className="good" onClick={() => onClick('good')}>Tak</button>

@@ -17,5 +17,6 @@ interface AssignTipToGoalsParams {
     tipId: string;
 }
 
+export const deleteGoal = actionCreator<number>('DELETE_GOAL');
 export const assignTipToGoals = actionCreator<AssignTipToGoalsParams>('ASSIGN_TIP_TO_GOALS');
 

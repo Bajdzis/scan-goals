@@ -24,7 +24,7 @@ export const WelcomePage: React.FC = () => {
             <StickyScroll>
                 <p>
                     Na początek wypisz swoje wszystkie cele, plany, marzenia które chciałbyś zrealizować. Będziemy intensywnie nad nimi pracować abyś mógł je spełnić. Zapisz także bardzo odległe cele, być może uda się je spełnić 
-                    <span role="img">😉</span>
+                    <span role="img" aria-label="">😉</span>
                 </p>
 
                 <StickyItem top={0}>

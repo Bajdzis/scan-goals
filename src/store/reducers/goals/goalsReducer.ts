@@ -1,5 +1,5 @@
 import { reducerWithInitialState } from 'typescript-fsa-reducers';
-import { createNewGoals, editGoals, assignTipToGoals } from '../../actions/goals/action';
+import { createNewGoals, editGoals, assignTipToGoals, deleteGoal } from '../../actions/goals/action';
 
 export interface Goal {
     name: string;
@@ -35,4 +35,5 @@ export const goalsReducer = reducerWithInitialState<GoalsState>([])
             ...fields
         };
         return newState;
-    });
+    })
+    .case(deleteGoal, (state, id) => state.filter((goal, index) => index !== id));

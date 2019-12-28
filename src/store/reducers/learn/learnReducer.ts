@@ -89,6 +89,14 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         ],
         unlockFields: ['events']
     },
+    'mind-7' : {
+        title: 'Przypominajki',
+        description: [
+            'Często przypominaj sobie o swoich celach. Powinieneś otoczyć się materiałami i przypominajkami które pomogą Ci skupić się na określonym celu. Gdzie i w jaki sposób powinieneś umieszczać przypomnienia? Nie ma ograniczeń!',
+            'Możesz ustawić hasło do komputera (np. “schudne20kg!”) oraz ustawić nową tapetę. Warto też wydrukować sobie cały nasz cel i powiesić sobie go w widocznym miejscu. Możesz powiesić go na lodówce lub obok łóżka. Dobrym miejscem jest również  lustro w łazience. Codziennie podczas mycia zębów będziemy mogli go przeczytać.'
+        ],
+        unlockFields: []
+    },
     'time-1': {
         title: 'Skup się!',
         description: [
@@ -130,13 +138,13 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
             'Często poświęcamy czas na powtarzanie sobie w myślach ważnych informacji lub zadań które mamy zrealizować. Zawsze mówimy sobie że przecież wszystko zapamiętamy. Jednak nie zawsze wychodzi to po naszej myśli.',
             'Warto zastosować triki metody GTD (getting things done). Jeżeli masz jakiś pomysł/ myśl którą musisz zapamiętać wyciągnij telefon i ja zapisz. Dzięki temu będziesz mógł o niej zapomnieć. Jeśli będziesz zapisywał wszystkie zadania poczujesz się bardziej zrelaksowany oraz nie będziesz tracił czasu na zadawanie pytań takich jak : “Czy na pewno pamiętałem o wszystkim?”, “Coś ja miałem zrobić?”.'
         ],
-        unlockFields: ['delete']
+        unlockFields: []
     },
     'fit-1': {
         title: 'Rusz się!',
         description:[
             'Często popełniamy błąd i od nowego roku wybieramy się na siłownie. Często nieświadomie robimy sobie krzywde zaczynająć nasz trening bez przygotowania. Dlatego warto uświadomić sobie że nie trzeba chodzić na siłownie aby pozbyć się zbędnych kilogramów. Wystarczą nam inne formy aktywności dopasowane do nas samych.',
-            'Jak wpleść wykonywanie drobnych aktywności nasz dzień? Jest wiele sposobów które pomogą się nam przygotować się na cięższe ćwiczenia. Najprostrzym sposobem jest zmiana środku transportu. Nie musimy wszędzie jeździć autem. Wybierając spacer lub rower unikniemy korków. Jeśli masz naprawde długą drogę do pracy możesz starać się parkować dalej od pracy aby przejść się kawałek :)',
+            'Jak wpleść wykonywanie drobnych aktywności w nasz dzień? Jest wiele sposobów które pomogą nam przygotować się na cięższe ćwiczenia. Najprostrzym sposobem jest zmiana środku transportu. Nie musimy wszędzie jeździć autem. Wybierając spacer lub rower unikniemy korków. Jeśli masz naprawde długą drogę do pracy możesz starać się parkować dalej od pracy aby przejść się kawałek :)',
             'Kolejną aktywnością są czynności domowe. Możesz zabrać się za gruntowne porządki w domu które zapewnią sporo aktywności. Również przygotowywanie własnych posiłków możemy zaliczyć do tak zwanych spontanicznych aktywności w ciągu dnia (NEAT). ',
             'Jak widzisz możliwości jest sporo. Sam pewnie znajdziesz kolejne sposoby zapewnienia sobie większej aktywności w ciągu dnia. Postaraj się już dziś dodać taką aktywność do swojego planu dnia. ',
             'Powodzenia !'
@@ -149,13 +157,17 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
             'Często słyszymy o efekcie jojo oraz o dietach cud. Jeśli ktoś osiągnął super sylwetkę często pytamy jaką dietę stosował. Jednak każdy z nas powinien taką dietę stworzyć pod siebie!',
             'Nie jest to trudne! Zacznijmy od tego jak długo powinniśmy być na diecie? Biorąc pod uwage fakt że nie jesteśmy zadowoleni z swojej sylwetki powinniśmy porzucić nasz sposób odżywiania raz na zawsze! Jednak często wystarczą drobne zmiany aby nasza dieta nie dodawała nam kilogramów które zrzucimy.',
             'Każda dieta odchudzająca działa na takiej samej zasadzie. Musimy jeść mniej kalorii niż potrzebujemy. Dlatego schudnąć możemy na każdej diecie nawet jedząc czekoladę w jej trakcie. Jednak warto ograniczyć słodycze oraz tłuste potrawy w trakcie diety odchudzającej. Dzięki temu będziemy jeść dużo większe posiłki zachowując tą samą liczbę kalorii. Dlatego też nie będziemy głodni.',
-            'Znajdź w sklepie play “Kalkulator kalorii scanfood” i zacznij zapisywać swoją obecną dietę w kalkulatorze. Nie musisz od razu przechodzić na dietę odchudzającą. Warto policzyć ile kalorii zapewnia nam nasza obecna dieta i na bieżąco wprowadzać zmiany.'
+            'Znajdź w sklepie google play “<a href="https://play.google.com/store/apps/details?id=pl.scan.food.twa" target="_blank">Kalkulator kalorii scanfood</a>” i zacznij zapisywać swoją obecną dietę w kalkulatorze. Nie musisz od razu przechodzić na dietę odchudzającą. Warto policzyć ile kalorii zapewnia nam nasza obecna dieta i na bieżąco wprowadzać zmiany.'
         ],
         unlockFields: []
     },
     'fit-3': {
         title: 'Rób pomiary!',
-        description: ['Sprawdzaj czy Twoje działania przynoszą pożadany skutek'],
+        description: [
+            'Jeśli poprawnie określisz sposób mierzenia postępów masz większe szanse na zrealizowanie celu. Gdy idzie nam dobrze i widzimy efekty łatwiej nam utrzymać motywację. Gdy efektów brak możemy szybko skorygować nasze działania.',
+            'W przypadku diety najlepiej sprawdza się średnia waga z całego tygodnia oraz zdjęcia naszej sylwetki. Obie metryki są dostępne za darmo w <a href="https://play.google.com/store/apps/details?id=pl.scan.food.twa" target="_blank">kalkulatorze kalorii scan food</a>. Podczas robienia zdjęć porównujących naszą sylwetkę scan-food pokaże Ci jak się ustawić w podobnej pozycji do poprzedniego zdjęcia.',
+            'W przypadku innych celów naszymi metrykami może być liczba zdobytych klientów, ilość przeczytanych książek lub cokolwiek innego możliwego do zmierzenia. Zapisz w każdym swoim celu w jaki sposób możesz mierzyć postęp jego realizacji'
+        ],
         unlockFields: ['measure']
     },
     'fit-4': {
@@ -189,6 +201,7 @@ export const LEARN_TIP_GROUP: {[key in LearnGroupNames]: LearnTip[]} = {
         getTip('mind-4'),
         getTip('mind-5'),
         getTip('mind-6'),
+        getTip('mind-7'),
     ],
     time:[
         getTip('time-1'),
