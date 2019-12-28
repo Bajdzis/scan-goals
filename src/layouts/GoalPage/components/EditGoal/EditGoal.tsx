@@ -106,6 +106,12 @@ export const EditGoal: React.FC<EditGoalProps> = ({ goalIndex, onStopEdit }: Edi
                             </button>
                         </div>
                     </label>}
+                    
+                    {goalFields.length < 7 && <div className="learnPage__alert">
+                        Odczytuj codziennie wskazówki i odblokuj nowe pola do uzupełnienia.
+                        Jeszcze nie odblokowałeś wszystkich pól!
+                    </div>}
+
                     {!!goal.tipsId.length && <h2>Przydatne wskazówki:</h2>}
                     {goal.tipsId.map(tipId => {
                         const tip = getTip(tipId);
