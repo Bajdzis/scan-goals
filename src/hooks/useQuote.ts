@@ -1,4 +1,6 @@
 import { useLearnStats } from './useLearnStats';
+import { isRead } from '../store/selector/todayRead/selector';
+import { useSelector } from 'react-redux';
 
 interface Quote {
     value: string;
@@ -7,9 +9,9 @@ interface Quote {
 
 export function useQuote() {
     const {readTipsCount} = useLearnStats();
-    return QUOTES[readTipsCount] || QUOTES[0];
+    const isReadToday = useSelector(isRead);
+    return QUOTES[readTipsCount - (isReadToday ? 1 : 0)] || QUOTES[0];
 }
-
 
 const QUOTES: Quote[] = [
     {
@@ -39,5 +41,41 @@ const QUOTES: Quote[] = [
     {
         value: 'Nigdy nie rezygnuj z marzenia, tylko dlatego, że zrealizowanie go wymaga czasu. Czas i tak upłynie.',
         author: 'Earl Nightingale'
+    },
+    {
+        value: 'Aby zer­wać z na­wykiem, wyrób so­bie in­ny, który go wymaże.',
+        author: 'Mark Twain'
+    },
+    {
+        value: 'Twój czas jest ograniczony, więc nie marnuj go na byciem kimś, kim nie jesteś.',
+        author: 'Steve Jobs'
+    },
+    {
+        value: 'Pudłujesz 100% strzałów, jeśli w ogóle ich nie wykonujesz.',
+        author: 'Wayne Gretzky'
+    },
+    {
+        value: 'Nie ma nic złego w świętowaniu sukcesu, ale ważniejsze jest wyciągnięcie nauki z porażki.',
+        author: 'Bill Gates'
+    },
+    {
+        value: 'Nie znam klucza do sukcesu, ale kluczem do porażki jest próbować zadowolić wszystkich.',
+        author: 'Bill Cosby'
+    },
+    {
+        value: 'Jeśli chcesz gdzieś dojść, najlepiej znajdź kogoś, kto już tam doszedł.',
+        author: 'Robert Kiyosaki '
+    },
+    {
+        value: 'Najtrudniejsze jest zdecydowanie się na działanie. Reszta to już tylko kwestia wytrwałości.',
+        author: 'Amelia Earhart'
+    },
+    {
+        value: 'Kiedyś – nie ma takiego dnia tygodnia.',
+        author: 'Janet Dailey'
+    },
+    {
+        value: 'Możesz zrobić wszystko, co chcesz jeśli tylko trzymasz się tego celu wystarczająco długo.',
+        author: 'Helen Keller'
     }
 ];
