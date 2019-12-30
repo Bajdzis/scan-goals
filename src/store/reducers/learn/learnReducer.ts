@@ -44,7 +44,7 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         title: 'Zerwij z rozmyślaniem',
         description: [
             'Często wyobrażamy sobie jak może potoczyć się przyszłość. Jednak często jest to źródło naszego niezadowolenia z obecnego stanu. Gdy nastawimy się na jedno konkretne wydarzenie czujemy się rozczarowani gdy coś pójdzie nie po naszej myśli. Staraj się działać DZIŚ aby wpłynąć na JUTRO. Myślenie o dniu jutrzejszym nie przybliży nas do celu.',
-            'Przeszłość jest ważna jednak musisz pamiętać że jej nie zmienisz. Działać możesz tylko DZIŚ. Analizuj co zrobiłeś źle. Pamiętaj że dzięki popełnianym błędom stajesz się mądrzejszy i skuteczniejszy. ', 
+            'Przeszłość jest ważna jednak musisz pamiętać, że jej nie zmienisz. Działać możesz tylko DZIŚ. Analizuj co zrobiłeś źle. Pamiętaj, że dzięki popełnianym błędom stajesz się mądrzejszy i skuteczniejszy. ', 
             'Jest tylko tu i teraz. Skończ z myśleniem o przeszłości i przyszłosci.'
         ],
         unlockFields: []
@@ -52,17 +52,17 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
     'mind-2' : {
         title: 'Opisz dokładnie co chcesz osiągnąć',
         description: [
-            'Nasze plany trudno nam zrealizować gdy nie wiemy co tak naprawde chcemy osiągnąć. Nasz cel powinien być najlepiej jak to możliwe sprecyzowany. Przykładami mało sprecyzowanych celów mogą być plany: “chcę schudnąć”, “chcę czytać więcej książek”. Obydwa przykłady nic nam nie mówią ponieważ są mało precyzyjne. Powinniśmy starać się wyznaczyć cel w taki sposób aby wiedzieć kiedy osiągniemy cel.',
+            'Nasze plany trudno nam zrealizować gdy nie wiemy co tak naprawdę chcemy osiągnąć. Nasz cel powinien być najlepiej jak to możliwe sprecyzowany. Przykładami mało sprecyzowanych celów mogą być plany: “chcę schudnąć”, “chcę czytać więcej książek”. Obydwa przykłady nic nam nie mówią ponieważ są mało precyzyjne. Powinniśmy starać się wyznaczyć cel w taki sposób aby wiedzieć kiedy osiągniemy cel.',
             'Prawidłowo sprecyzowane cele powinny brzmieć : “chcę schudnąć 5 kg”, “chcę przeczytać 3 książki każdego miesiąca”.', 
-            'Staraj nie skupiać się nad sposobem realizacji celu. Jedyne co powinieneś teraz określić to gdzie chcesz być a nie jak tam dojść.'
+            'Staraj nie skupiać się nad sposobem realizacji celu. Jedyne co powinieneś teraz określić to gdzie chcesz być, a nie jak tam dojść.'
         ],
         unlockFields: ['specific']
     },
     'mind-3' : {
         title: 'Rozłóż plan na części',
         description: [
-            'Duży skomplikowany cel może nas przerosnąć. Gdy będziemy patrzeć jak dużo nam brakuje do jego realizacji możemy czuć że nie damy rady. Przez to odległe cel mogą być trudne w realizacji. A ich realizacja często odwlekana. Aby sobie pomóc warto wyznaczyć kilka mniejszych celów.',
-            'Załóżmy że chcemy schudnąć 10 kg. Warto aby pierwsza część celu była łatwa do osiągnięcia. Dlatego też możemy zacząć od 1 kg, następnie spróbować zawalczyć o 3 kg a na samym końcu zacząć realizować cel 10 kg. Dzięki temu nasz cel jest podzielony na 3 mniejsze fragmenty i możemy się skupić tylko na najbliższym aspekcie.'
+            'Duży skomplikowany cel może nas przerosnąć. Gdy będziemy patrzeć jak dużo nam brakuje do jego realizacji możemy czuć, że nie damy rady. Przez to odległe cele mogą być trudne w realizacji, a ich realizacja często odwlekana. Aby sobie pomóc warto wyznaczyć kilka mniejszych celów.',
+            'Załóżmy, że chcemy schudnąć 10 kg. Warto aby pierwsza część celu była łatwa do osiągnięcia. Dlatego też możemy zacząć od 1 kg, następnie spróbować zawalczyć o 3 kg, a na samym końcu zacząć realizować cel 10 kg. Dzięki temu nasz cel jest podzielony na 3 mniejsze fragmenty i możemy się skupić tylko na najbliższym aspekcie.'
         ],
         unlockFields: ['achievable']
     },
@@ -76,7 +76,7 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
     'mind-5' : {
         title: 'Określ plan w czasie',
         description: [
-            'Określ jak długo może Ci zająć zrealizowanie celu. Jeśli nie jesteś w stanie tego określić być może warto w pierwszej kolejności zrealizować tylko część celu. Możesz podzielić go na kilka mniejszych części a następnie zrezygnować z wykonywania niektórych z nich. Warto abyś był w stanie mniej więcej określić ile może zająć jego realizacja.'
+            'Określ jak długo może Ci zająć zrealizowanie celu. Jeśli nie jesteś w stanie tego określić być może warto w pierwszej kolejności zrealizować tylko część celu. Możesz podzielić go na kilka mniejszych części, a następnie zrezygnować z wykonywania niektórych z nich. Warto abyś był w stanie mniej więcej określić ile może zająć jego realizacja.'
         ],
         unlockFields: ['time']
     },
@@ -135,7 +135,7 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
     'time-5' : {
         title: 'Odpocznij od ciągłego myślenia',
         description: [
-            'Często poświęcamy czas na powtarzanie sobie w myślach ważnych informacji lub zadań które mamy zrealizować. Zawsze mówimy sobie że przecież wszystko zapamiętamy. Jednak nie zawsze wychodzi to po naszej myśli.',
+            'Często poświęcamy czas na powtarzanie sobie w myślach ważnych informacji lub zadań które mamy zrealizować. Zawsze mówimy sobie, że przecież wszystko zapamiętamy. Jednak nie zawsze wychodzi to po naszej myśli.',
             'Warto zastosować triki metody GTD (getting things done). Jeżeli masz jakiś pomysł/ myśl którą musisz zapamiętać wyciągnij telefon i ja zapisz. Dzięki temu będziesz mógł o niej zapomnieć. Jeśli będziesz zapisywał wszystkie zadania poczujesz się bardziej zrelaksowany oraz nie będziesz tracił czasu na zadawanie pytań takich jak : “Czy na pewno pamiętałem o wszystkim?”, “Coś ja miałem zrobić?”.'
         ],
         unlockFields: []
@@ -143,8 +143,8 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
     'fit-1': {
         title: 'Rusz się!',
         description:[
-            'Często popełniamy błąd i od nowego roku wybieramy się na siłownie. Często nieświadomie robimy sobie krzywde zaczynająć nasz trening bez przygotowania. Dlatego warto uświadomić sobie że nie trzeba chodzić na siłownie aby pozbyć się zbędnych kilogramów. Wystarczą nam inne formy aktywności dopasowane do nas samych.',
-            'Jak wpleść wykonywanie drobnych aktywności w nasz dzień? Jest wiele sposobów które pomogą nam przygotować się na cięższe ćwiczenia. Najprostrzym sposobem jest zmiana środku transportu. Nie musimy wszędzie jeździć autem. Wybierając spacer lub rower unikniemy korków. Jeśli masz naprawde długą drogę do pracy możesz starać się parkować dalej od pracy aby przejść się kawałek :)',
+            'Często popełniamy błąd i od nowego roku wybieramy się na siłownie. Często nieświadomie robimy sobie krzywde zaczynająć nasz trening bez przygotowania. Dlatego warto uświadomić sobie, że nie trzeba chodzić na siłownie aby pozbyć się zbędnych kilogramów. Wystarczą nam inne formy aktywności dopasowane do nas samych.',
+            'Jak wpleść wykonywanie drobnych aktywności w nasz dzień? Jest wiele sposobów które pomogą nam przygotować się na cięższe ćwiczenia. Najprostrzym sposobem jest zmiana środku transportu. Nie musimy wszędzie jeździć autem. Wybierając spacer lub rower unikniemy korków. Jeśli masz naprawdę długą drogę do pracy możesz starać się parkować dalej od pracy aby przejść się kawałek :)',
             'Kolejną aktywnością są czynności domowe. Możesz zabrać się za gruntowne porządki w domu które zapewnią sporo aktywności. Również przygotowywanie własnych posiłków możemy zaliczyć do tak zwanych spontanicznych aktywności w ciągu dnia (NEAT). ',
             'Jak widzisz możliwości jest sporo. Sam pewnie znajdziesz kolejne sposoby zapewnienia sobie większej aktywności w ciągu dnia. Postaraj się już dziś dodać taką aktywność do swojego planu dnia. ',
             'Powodzenia !'
@@ -155,7 +155,7 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         title: 'Eksperymentuj!',
         description: [
             'Często słyszymy o efekcie jojo oraz o dietach cud. Jeśli ktoś osiągnął super sylwetkę często pytamy jaką dietę stosował. Jednak każdy z nas powinien taką dietę stworzyć pod siebie!',
-            'Nie jest to trudne! Zacznijmy od tego jak długo powinniśmy być na diecie? Biorąc pod uwage fakt że nie jesteśmy zadowoleni z swojej sylwetki powinniśmy porzucić nasz sposób odżywiania raz na zawsze! Jednak często wystarczą drobne zmiany aby nasza dieta nie dodawała nam kilogramów które zrzucimy.',
+            'Nie jest to trudne! Zacznijmy od tego jak długo powinniśmy być na diecie? Biorąc pod uwage fakt, że nie jesteśmy zadowoleni z swojej sylwetki powinniśmy porzucić nasz sposób odżywiania raz na zawsze! Jednak często wystarczą drobne zmiany aby nasza dieta nie dodawała nam kilogramów które zrzucimy.',
             'Każda dieta odchudzająca działa na takiej samej zasadzie. Musimy jeść mniej kalorii niż potrzebujemy. Dlatego schudnąć możemy na każdej diecie nawet jedząc czekoladę w jej trakcie. Jednak warto ograniczyć słodycze oraz tłuste potrawy w trakcie diety odchudzającej. Dzięki temu będziemy jeść dużo większe posiłki zachowując tą samą liczbę kalorii. Dlatego też nie będziemy głodni.',
             'Znajdź w sklepie google play “<a href="https://play.google.com/store/apps/details?id=pl.scan.food.twa" target="_blank">Kalkulator kalorii scanfood</a>” i zacznij zapisywać swoją obecną dietę w kalkulatorze. Nie musisz od razu przechodzić na dietę odchudzającą. Warto policzyć ile kalorii zapewnia nam nasza obecna dieta i na bieżąco wprowadzać zmiany.'
         ],
@@ -173,7 +173,7 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
     'fit-4': {
         title: 'Zadbaj o jakość snu!',
         description: [
-            'Nie wysypiasz się? To nie dobrze! Gdy jesteśmy zaspani jesteśmy mniej efektywni i trudniej nam realizować spontaniczną aktywność w ciągu dnia! Do tego nie zapewniamy sobie odpowiedniej regeneracji naszego organizmu. Jakość snu może wpływać na nasze efekty utrzymania wagi. Zwracaj uwagę co poprawia Twoją jakość snu a co mu przeszkadza.',
+            'Nie wysypiasz się? To nie dobrze! Gdy jesteśmy zaspani jesteśmy mniej efektywni i trudniej nam realizować spontaniczną aktywność w ciągu dnia! Do tego nie zapewniamy sobie odpowiedniej regeneracji naszego organizmu. Jakość snu może wpływać na nasze efekty utrzymania wagi. Zwracaj uwagę co poprawia Twoją jakość snu, a co mu przeszkadza.',
             'Warto zacząć od określenia stałej pory kładzenia się spać oraz budzenia się. Wyrobienie sobie takiego nawyku jest proste i pozwoli nam łatwiej określać kiedy powinniśmy iść spać. Warto też zadbać o zmniejszoną emisję światła niebieskiego z ekranów naszych urządzeń. Znajdź ustawienia w swoim telefonie które zmienią barwy Twojego wyświetlacza przed pójściem spać.',
             'Jeśli posiadasz sportowe smart zegarki możesz mierzyć swój sen. Kontroluj i sprawdzaj co na Ciebie działa. Często mogą pomóc odpowiednie zasłony które od izolują nas od świateł ulicznych czy wschodu słońca.'
         ],
