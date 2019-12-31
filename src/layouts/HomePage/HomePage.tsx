@@ -60,15 +60,15 @@ export const HomePage: React.FC = () => {
                 </div>
             </div>
             <div>
-                <button type="button" onClick={saveState}>
+                <button type="button" onClick={saveState} style={{lineHeight: 1}}>
                     Wykonaj kopie
                     <br/>
-                    <small >Zapisz swoje dane w pliku aby mieć pewność że ich nie stracisz</small>
+                    <small style={{display: 'inline-block', marginTop:'8px',fontWeight: 400, fontFamily: '\'Open Sans\', sans-serif'}}>Zapisz swoje dane w pliku aby mieć pewność że ich nie stracisz</small>
                 </button>
-                {share && <button type="button" onClick={share}>
+                {share && <button type="button" onClick={share} style={{lineHeight: 1, marginTop:'16px'}}>
                     Zmotywuj znajomych
                     <br/>
-                    <small >Poleć naszą aplikacje jeśli Ci się podoba!</small>
+                    <small style={{display: 'inline-block', marginTop:'8px',fontWeight: 400, fontFamily: '\'Open Sans\', sans-serif'}}>Poleć naszą aplikacje jeśli Ci się podoba!</small>
                 </button>}
             </div>
         </div>
