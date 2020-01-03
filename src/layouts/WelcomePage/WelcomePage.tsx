@@ -25,6 +25,7 @@ export const WelcomePage: React.FC = () => {
                 <p>
                     Na początek wypisz swoje wszystkie cele, plany, marzenia które chciałbyś zrealizować. Będziemy intensywnie nad nimi pracować abyś mógł je spełnić. Zapisz także bardzo odległe cele, być może uda się je spełnić 
                     <span role="img" aria-label="">😉</span>
+                    Jeśli zapomnisz wpisać teraz celu mozna go dodać później :)
                 </p>
 
                 <StickyItem top={0}>
@@ -36,7 +37,14 @@ export const WelcomePage: React.FC = () => {
                 <div style={{height:"50vh"}}></div>
 
                 <StickyItem bottom={0}>
-                    <button type="button" className="two" onClick={goToHome} disabled={countGoal <= 0}> Zakończ dodawanie </button>
+                    <button type="button" className="two" onClick={() => {
+                        if(countGoal <= 0) {
+                            return alert('Dodaj przynajmniej jeden cel nad którym możesz pracować!');
+                        }
+                        goToHome();
+                    }}>
+                        Zakończ dodawanie
+                    </button>
                 </StickyItem>
             </StickyScroll>
         </div>

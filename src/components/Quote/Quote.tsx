@@ -6,6 +6,9 @@ export const Quote: React.FC = () => {
     const quote = useQuote();
 
     return (<div className="quote">
+        <small className="quote__label">
+            Cytat na dziś:
+        </small>
         <div className="quote__value">
             {quote.value}
         </div>
