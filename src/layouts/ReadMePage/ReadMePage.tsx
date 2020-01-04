@@ -31,7 +31,7 @@ export const ReadMePage: React.FC<ReadMePageProps> = ({ close }: ReadMePageProps
                 <p>
                     Nasza aplikacja nie służy do kontrolowania postępów oraz planowania codziennych zadań. 
                     Aplikacja powstała dla osób które chcą poprawnie zaplanować realizację swoich celów.
-                    Dzięki temu zwiększają one szanse na pokonanie przeciwności oraz lepiej poznać samego siebie.
+                    Dzięki temu zwiększają one szanse na pokonanie przeciwności oraz lepiej poznają siebie.
                     Staraliśmy się przedstawić wiele technik i sposobów które pomogą zrealizować cele. 
                 </p>
                 <p>
