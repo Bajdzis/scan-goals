@@ -25,7 +25,7 @@ export const LearnPage: React.FC = () => {
             <Header onClickBack={goToHome}>
                 Rozwijaj się
             </Header>
-            <p>Wybierz jeden z trzech obszarów w których chciałbyś się rozwijać. Dziennie może odczytać tylko jedną wzkazówkę. </p>
+            <p>Wybierz jeden z trzech obszarów w których chciałbyś się rozwijać. Dziennie może odczytać tylko jedną wzkazówkę. Niektóre wskazówki odblokowują ukryte funkcje aplikacji!</p>
             <div className="learnPage__buttons">
  
                 <button className="inline"  type="button" onClick={() => setPage('mind')} disabled={mindCount === LEARN_TIP_GROUP.mind.length || isReadToday}>

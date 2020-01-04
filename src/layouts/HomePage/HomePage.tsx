@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './HomePage.scss';
 import { usePageRoute } from '../../hooks/usePageRoute';
 import { useSelector } from 'react-redux';
@@ -8,6 +8,7 @@ import { Quote } from '../../components/Quote/Quote';
 import { useShare } from '../../hooks/useShare';
 import { useSaveState } from '../../hooks/useSaveState';
 import { StickyScroll } from '../../components/StickyScroll/StickyScroll';
+import { ReadMePage } from '../ReadMePage/ReadMePage';
 
 export const HomePage: React.FC = () => {
     const goToLearn = usePageRoute('learn');
@@ -16,6 +17,14 @@ export const HomePage: React.FC = () => {
     const {allTipsCount, readTipsCount} = useLearnStats();
     const share = useShare();
     const saveState = useSaveState();
+    const [showReadMe, setShowReadMe] =  useState(localStorage.getItem('read-read-me-page') || 'yes');
+    
+    if (showReadMe === 'yes') {
+        return <ReadMePage close={() => {
+            setShowReadMe('no');
+            localStorage.setItem('read-read-me-page', 'no');
+        }}/>;
+    }
     return (
         <div  style={
             {
