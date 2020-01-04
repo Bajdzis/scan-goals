@@ -26,16 +26,16 @@ export const ReadMePage: React.FC<ReadMePageProps> = ({ close }: ReadMePageProps
                     Głównym celem naszej aplikacji jest zaplanowanie celu oraz wyćwiczenie nawyku codziennej pracy nad sobą.
                     Dlatego też zachęcamy do używania naszej aplikacji codziennie rano przy śniadaniu lub kawie!
                     Na każdy dzień przygotowaliśmy jedną poradę nad którą powinieneś pracować w trakcie całego dnia.
-                    Niektótre porady odblokowują ukryte funkcjonalności w aplikacji! Odblokuj je wszystkie!
+                    Niektóre porady odblokowują ukryte funkcjonalności w aplikacji! Odblokuj je wszystkie!
                 </p>
                 <p>
                     Nasza aplikacja nie służy do kontrolowania postępów oraz planowania codziennych zadań. 
-                    Aplikacja powstała dla osób które chcą poprawnie zaplanować realizacje swoich celów.
-                    Dzięki temu zwiększają one szanse na pokonanie przeciwności oraz lepiej poznają samego siebie.
+                    Aplikacja powstała dla osób które chcą poprawnie zaplanować realizację swoich celów.
+                    Dzięki temu zwiększają one szanse na pokonanie przeciwności oraz lepiej poznać samego siebie.
                     Staraliśmy się przedstawić wiele technik i sposobów które pomogą zrealizować cele. 
                 </p>
                 <p>
-                    Jeśli chciałbyś podzieliś się swoimi planami lub 
+                    Jeśli chciałbyś podzielić się swoimi postanowieniami lub
                     poprosić o dodatkowe porady zapraszamy Cię do naszej grupy na facebooku!
                 </p>
                 <StickyItem bottom={0}>
