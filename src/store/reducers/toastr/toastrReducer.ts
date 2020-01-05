@@ -4,6 +4,7 @@ import { addToastr, deleteToastr } from '../../actions/toastr/action';
 export type Toastr = {
     type: 'success'|'error'|'warning'|'info',
     message: string;
+    time?: number;
     id: number;
 }
 
@@ -16,12 +17,13 @@ export const toastrReducer = reducerWithInitialState<ToastrState>({
     messages: [],
     incrementId: 0,
 })
-    .case(addToastr, (state, {message, type}) => ({ 
+    .case(addToastr, (state, {message, type, time}) => ({ 
         messages: [
             ...state.messages, 
             {
                 id: state.incrementId++,
                 message,
+                time,
                 type
             }
         ], 

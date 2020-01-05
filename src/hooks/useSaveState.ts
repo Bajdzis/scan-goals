@@ -23,7 +23,8 @@ export function useSaveState() {
         download('moj-everest.state-dump.json', JSON.stringify(state, null, 4));
         dispatch(addToastr({
             type: 'success',
-            message: 'Zapisano w pliku JSON! Jest to plik tekstowy.'
+            message: 'Plik został poprawnie wygenerowany.',
+            time: 2000
         }));
     };
 }

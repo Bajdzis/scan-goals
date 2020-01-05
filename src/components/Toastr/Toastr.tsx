@@ -16,12 +16,12 @@ export const Toastr: React.FC = () => {
             {messages.map((message) => {
                 if (renderId.indexOf(message.id) === -1) {
                     setTimeout(() => {
-                        setRenderId([...renderId, message.id]);
+                        setRenderId((state) => [...state, message.id]);
                     }, 1);
 
                     setTimeout(() => {
-                        setHideId([...hideId, message.id]);
-                    }, 9000);
+                        setHideId((state) => [...state, message.id]);
+                    }, message.time || 9000);
                 }
 
                 return (
