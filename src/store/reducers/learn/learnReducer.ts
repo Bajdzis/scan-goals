@@ -45,7 +45,7 @@ const LEARN_TIP: {[key: string]: Omit<LearnTip, 'id'>} = {
         description: [
             'Często wyobrażamy sobie jak może potoczyć się przyszłość. Jednak często jest to źródło naszego niezadowolenia z obecnego stanu. Gdy nastawimy się na jedno konkretne wydarzenie czujemy się rozczarowani gdy coś pójdzie nie po naszej myśli. Staraj się działać DZIŚ aby wpłynąć na JUTRO. Myślenie o dniu jutrzejszym nie przybliży nas do celu.',
             'Przeszłość jest ważna jednak musisz pamiętać, że jej nie zmienisz. Działać możesz tylko DZIŚ. Analizuj co zrobiłeś źle. Pamiętaj, że dzięki popełnianym błędom stajesz się mądrzejszy i skuteczniejszy. ', 
-            'Jest tylko tu i teraz. Skończ z myśleniem o przeszłości i przyszłosci.'
+            'Jest tylko tu i teraz. Skończ z myśleniem o przeszłości i przyszłości.'
         ],
         unlockFields: []
     },

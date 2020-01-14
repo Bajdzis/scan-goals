@@ -7,6 +7,8 @@ import { readTip } from '../../../../store/actions/learn/action';
 import { goToPage } from '../../../../store/actions/page/action';
 import { addToastr } from '../../../../store/actions/toastr/action';
 import { StickyScroll } from '../../../../components/StickyScroll/StickyScroll';
+import { TextReader } from '../../../../components/TextReader/TextReader';
+import { TextPlayer } from '../../../../components/TextPlayer/TextPlayer';
 
 interface NewTipProps {
     groupName: LearnGroupNames;
@@ -52,11 +54,18 @@ export const NewTip: React.FC<NewTipProps> = ({ groupName, onRead }: NewTipProps
     };
     return (
         <div className="newTip">
-            <h1>{tip.title}</h1>
+
+            <div style={{ display: 'flex' }}>
+                <h1 style={{ width: '100%' }} >{tip.title}</h1>
+                <TextPlayer />
+            </div>
+
             <StickyScroll>
-                {tip.description.map((text, index) => <p key={index} dangerouslySetInnerHTML={{
-                    __html : text
-                }}/>)}
+                <TextReader>
+                    {tip.description.map((text, index) => <p key={index} dangerouslySetInnerHTML={{
+                        __html : text
+                    }}/>)}
+                </TextReader>
                 <h3>Czy porada przyda Ci się do realizacji któregoś z celów?</h3>
                 <div className="newTip__buttons">
                     <button className="good" onClick={() => onClick('good')}>Tak</button>

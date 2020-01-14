@@ -1,27 +1,26 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 
 import './TextReader.scss';
-import { useSpeechText } from '../../hooks/useSpeechText';
 
 interface TextReaderProps {
-    children: React.ReactElement;
+    children: React.ReactNode;
 }
 
 export const TextReader: React.FC<TextReaderProps> = ({children}: TextReaderProps) => {
+    const div = useRef<HTMLDivElement>(null);
 
-    const speech = useSpeechText();
+    useEffect(() => {
+        const text = div.current ? div.current.innerText : '';
 
-    if (speech === null) {
-        return children;
-    }
+        text && window.document.body.dispatchEvent(new CustomEvent('speech-text', { 
+            detail: {
+                text
+            }
+        }));
+    }, [div]);
 
-    return <div onClick={(e) => {
-        // @ts-ignore
-        speech(e.target.innerText);
-        // @ts-ignore
-        console.log(e.target.innerText);
-    }}>
+    return <div ref={div}>
         {children}
     </div>;
 
-}
+};
